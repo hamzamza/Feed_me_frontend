@@ -1,10 +1,28 @@
+import axios from "axios";
+import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-
+import { URL } from "../URL";
+import useFetch  from "../useFetch";
 function Home() {
-    return ( 
+  const {data , loading} = useFetch(URL + 'numUsers')
+  useEffect(()=>{
+    const start = async()=>{
+    try{
+      const data = await  axios.get(URL+"vCoutners")
+     
+      console.log(data.data.msg);
   
+    }
+    catch(err){
+      console.log(err);
+    }
+    
+    
+  }
+  start()},[])
+    return (        
       <div className="grid grid-cols-12">
-      <Navbar active ={0}/>
+     <Navbar active ={0}/>
     <div className=" bg-gray-100 pr-2  col-span-12 lg:col-span-10">
     <div className="flex justify-center lg:justify-end gap-3 mt-3 mr-3 ">
       <a href="#" className="btn">Log in</a>
@@ -95,6 +113,11 @@ function Home() {
     <button className="btn  m-10">
       <div>Load more</div>
     </button>
+<div className="flex justify-center mb-10">
+
+    {!loading &&   <div className="  ml-4 max-w-fit p-3 rounded-xl bg-yellow-200 "> visiters are {data.number} </div>
+       } 
+       </div>
     </div>
   </div>);
 }
