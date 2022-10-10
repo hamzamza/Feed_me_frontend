@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900;1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+
+
+.height90{
+    height: 90vh;
+}
+.inputs{
+    @apply   outline-none border-2 border-yellow-300  mt-3 rounded-md p-1 mx-5 ;
+}
+.card{
+    @apply bg-white rounded overflow-hidden shadow-md relative;
+}
+.badge{
+    @apply bg-gray-200 m-2 uppercase font-bold rounded-full p-2 absolute top-0;
+}
+
+.btn{
+    @apply rounded-3xl py-2 px-3 uppercase text-xs font-bold cursor-pointer border-yellow-300 shadow-sm tracking-wide text-yellow-500 hover:text-yellow-700 bg-yellow-100; 
+}
+.active{
+    @apply text-center bg-yellow-200 ;
+}
+.menu-active{
+    @apply flex flex-col;
+}
