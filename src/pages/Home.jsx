@@ -30,7 +30,7 @@ function Home() {
     </div>  
     <header className="sm:flex  items-end gap-3 border-b-2 border-yellow-200 w-max ml-8 ">
       <h2 className="text-gray-700 text-5xl">Recipes</h2>
-      <h3 className="text-2xl font-semilbold animate-bounce text-gray-400"> fik jou3 FeeD-ME . ma</h3>
+      <h3 className="text-2xl font-semilbold animate-bounce text-gray-400 mt-3 lg:mt-0"> fik jou3 FeeD-ME . ma</h3>
     </header>
     <div>
       <h4 className="font-bold text-gray-400 text-3xl mt-20 text-center xl:text-left xl:ml-10 xl:mb-4 mb-5">Latest Recipes</h4>
